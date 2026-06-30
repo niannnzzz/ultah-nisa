@@ -1,392 +1,1246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Natan 22th 🎂</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-<div id="cur"></div>
-<div id="cur-ring"></div>
-<canvas id="ptx"></canvas>
-<div id="slide-overlay"></div>
-<div id="lbox" onclick="closeLB()"><img id="lbimg" src="" alt=""/></div>
-<!-- login -->
-<section id="pg-login" class="pg on">
-  <div class="lg-orb lg-orb1"></div>
-  <div class="lg-orb lg-orb2"></div>
-  <div class="lg-orb lg-orb3"></div>
-  <div class="login-card">
-    <div class="lg-avatar">
-      <img src="img/download (7).gif" alt="" onerror="this.style.display='none'"/>
-      <div class="lg-avatar-ring"></div>
-    </div>
-    <p class="lg-title">our favorite day ✨</p>
-    <div class="pin-dots" id="pin-dots">
-      <div class="pin-dot" id="pd0"></div>
-      <div class="pin-dot" id="pd1"></div>
-      <div class="pin-dot" id="pd2"></div>
-      <div class="pin-dot" id="pd3"></div>
-    </div>
-    <div class="numpad">
-      <button class="nk" onclick="pk('1')">1</button>
-      <button class="nk" onclick="pk('2')">2</button>
-      <button class="nk" onclick="pk('3')">3</button>
-      <button class="nk" onclick="pk('4')">4</button>
-      <button class="nk" onclick="pk('5')">5</button>
-      <button class="nk" onclick="pk('6')">6</button>
-      <button class="nk" onclick="pk('7')">7</button>
-      <button class="nk" onclick="pk('8')">8</button>
-      <button class="nk" onclick="pk('9')">9</button>
-      <button class="nk del" onclick="clr()"><i class="fa-solid fa-delete-left"></i></button>
-      <button class="nk" onclick="pk('0')">0</button>
-      <button class="nk ok" onclick="chkPw()"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-    <div id="err-msg" class="err"></div>
-  </div>
-</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Anissa 23th 🎂</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet"/> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Pinyon+Script&family=Poppins:wght@600;700;800&family=Quicksand:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cur"></div>
+    <div id="cur-ring"></div>
+    <canvas id="ptx"></canvas>
+    <div id="slide-overlay"></div>
+    <div id="lbox" onclick="closeLB()"><img id="lbimg" src="" alt="" /></div>
 
-<!-- quiz -->
-<section id="pg-quiz" class="pg">
-  <div class="quiz-shell">
-    <div class="quiz-header">
-      <div class="quiz-badge"><i class="fa-solid fa-fire"></i> Kuis Nyebelin~</div>
-      <span class="quiz-counter" id="q-counter">1 / 7</span>
-    </div>
-    <div class="quiz-prog"><div class="quiz-prog-fill" id="quiz-fill"></div></div>
-    <div class="quiz-card">
-      <div id="quiz-q-wrap">
-        <div class="q-icon" id="q-icon"><i class="fa-solid fa-question"></i></div>
-        <p class="q-txt" id="q-txt"></p>
-        <div class="q-opts" id="q-opts"></div>
+    <!-- login -->
+    <section id="pg-login" class="pg on">
+      <div class="lg-orb lg-orb1"></div>
+      <div class="lg-orb lg-orb2"></div>
+      <div class="lg-orb lg-orb3"></div>
+      <div class="login-card">
+        <div class="lg-avatar">
+          <img
+            src="img/download (7).gif"
+            alt=""
+            onerror="this.style.display = 'none'"
+          />
+          <div class="lg-avatar-ring"></div>
+        </div>
+        <p class="lg-title">our favorite day ✨</p>
+        <div class="pin-dots" id="pin-dots">
+          <div class="pin-dot" id="pd0"></div>
+          <div class="pin-dot" id="pd1"></div>
+          <div class="pin-dot" id="pd2"></div>
+          <div class="pin-dot" id="pd3"></div>
+          <div class="pin-dot" id="pd4"></div>
+          <div class="pin-dot" id="pd5"></div>
+        </div>
+        <div class="numpad">
+          <button class="nk" onclick="pk('1')">1</button>
+          <button class="nk" onclick="pk('2')">2</button>
+          <button class="nk" onclick="pk('3')">3</button>
+          <button class="nk" onclick="pk('4')">4</button>
+          <button class="nk" onclick="pk('5')">5</button>
+          <button class="nk" onclick="pk('6')">6</button>
+          <button class="nk" onclick="pk('7')">7</button>
+          <button class="nk" onclick="pk('8')">8</button>
+          <button class="nk" onclick="pk('9')">9</button>
+          <button class="nk del" onclick="clr()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <button class="nk" onclick="pk('0')">0</button>
+          <button class="nk ok" onclick="chkPw()">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <div id="err-msg" class="err"></div>
       </div>
-      <div class="quiz-res" id="quiz-res">
-        <div class="trophy-wrap"><i class="fa-solid fa-trophy"></i></div>
-        <h3>Selesai juga! 🎊</h3>
-        <span class="big-score" id="res-score"></span>
-        <p id="res-comment"></p>
-        <button class="go-btn" onclick="goToLove()">
-          <i class="fa-solid fa-heart"></i> Ada Lagi Nih...
+    </section>
+
+    <!-- quiz-->
+    <section id="pg-quiz" class="pg">
+      <div class="quiz-shell">
+        <div class="quiz-header">
+          <div class="quiz-badge"><i class="fa-solid fa-fire"></i> Kuis~</div>
+          <span class="quiz-counter" id="q-counter">1 / 7</span>
+        </div>
+        <div class="quiz-prog">
+          <div class="quiz-prog-fill" id="quiz-fill"></div>
+        </div>
+        <div class="quiz-card">
+          <div id="quiz-q-wrap">
+            <div class="q-icon" id="q-icon">
+              <i class="fa-solid fa-question"></i>
+            </div>
+            <p class="q-txt" id="q-txt"></p>
+            <div class="q-opts" id="q-opts"></div>
+          </div>
+          <div class="quiz-res" id="quiz-res">
+            <div class="trophy-wrap"><i class="fa-solid fa-trophy"></i></div>
+            <h3>Keren banget kamu!!! 🎊</h3>
+            <span class="big-score" id="res-score"></span>
+            <p id="res-comment"></p>
+            <button class="go-btn" onclick="goToLove()">
+              <i class="fa-solid fa-heart"></i> Ada Lagi Nih...
+            </button>
+          </div>
+        </div>
+        <p
+          style="
+            text-align: center;
+            font-size: 0.73rem;
+            opacity: 0.6;
+            margin-top: 4px;
+          "
+        >
+          <i class="fa-solid fa-face-smile-wink"></i> Jawab jujur ya... kalau
+          berani lol
+        </p>
+      </div>
+    </section>
+
+    <!-- love page-->
+    <section id="pg-love" class="pg">
+      <div class="love-orb love-orb1"></div>
+      <div class="love-orb love-orb2"></div>
+      <p class="love-eyebrow">
+        <i class="fa-solid fa-heart-pulse"></i> &nbsp;Love Meter&nbsp;
+        <i class="fa-solid fa-heart-pulse"></i>
+      </p>
+      <h2 class="love-title">Seberapa Sayang<br />Kamu sama Aku?</h2>
+      <div class="love-heart-wrap">
+        <div class="love-glow" id="love-glow"></div>
+        <svg viewBox="0 0 100 100" class="love-svg" id="love-svg">
+          <defs>
+            <clipPath id="heart-clip">
+              <path
+                d="M50 88C25 65 5 50 5 30C5 15 18 5 30 5C40 5 47 12 50 18C53 12 60 5 70 5C82 5 95 15 95 30C95 50 75 65 50 88Z"
+              />
+            </clipPath>
+            <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e8857a" />
+              <stop offset="100%" stop-color="#c4566a" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M50 88C25 65 5 50 5 30C5 15 18 5 30 5C40 5 47 12 50 18C53 12 60 5 70 5C82 5 95 15 95 30C95 50 75 65 50 88Z"
+            fill="none"
+            stroke="rgba(232,122,165,0.4)"
+            stroke-width="2"
+          />
+          <rect
+            id="heart-fill"
+            x="0"
+            y="100"
+            width="100"
+            height="100"
+            fill="url(#hg)"
+            clip-path="url(#heart-clip)"
+          />
+        </svg>
+        <div class="love-pct" id="love-pct">0%</div>
+      </div>
+      <p class="love-msg" id="love-msg">Tekan & tahan buktiin sayangmu...</p>
+      <button
+        class="love-btn"
+        id="love-btn"
+        onmousedown="startLove()"
+        onmouseup="stopLove()"
+        onmouseleave="stopLove()"
+        ontouchstart="startLove()"
+        ontouchend="stopLove()"
+        ontouchcancel="stopLove()"
+      >
+        <i class="fa-solid fa-heart"></i> Tahan buktiin cintamu
+      </button>
+    </section>
+
+    <!-- spotify-->
+    <section id="pg-spotify" class="pg">
+      <div class="sp-orb sp-orb1"></div>
+      <div class="sp-orb sp-orb2"></div>
+      <div class="sp-album-wrap">
+        <div class="sp-disc" id="sp-disc">
+          <div class="sp-disc-center"><i class="fa-brands fa-spotify"></i></div>
+        </div>
+        <div class="sp-needle" id="sp-needle"></div>
+      </div>
+      <p class="sp-now-label">
+        <i class="fa-solid fa-circle-play"></i> Sekarang Lagi Memutar
+      </p>
+      <p class="sp-song">1000x</p>
+      <p class="sp-artist">Ghea Indrawari</p>
+      <div class="sp-controls">
+        <button class="sp-ctrl-btn"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="sp-ctrl-btn">
+          <i class="fa-solid fa-backward-step"></i>
         </button>
+        <button class="sp-play-btn"><i class="fa-solid fa-pause"></i></button>
+        <button class="sp-ctrl-btn">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <button class="sp-ctrl-btn"><i class="fa-solid fa-repeat"></i></button>
       </div>
-    </div>
-    <p style="text-align:center;font-size:.73rem;opacity:.6;margin-top:4px"><i class="fa-solid fa-face-smile-wink"></i> Jawab jujur ya... kalau berani lol</p>
-  </div>
-</section>
+      <div class="sp-timeline">
+        <div class="sp-time-row">
+          <span>0:00</span><span id="sp-now-time">0:00</span>
+        </div>
+        <div class="sp-bar"><div class="sp-bar-fill" id="sp-fill"></div></div>
+        <div class="sp-time-row"><span></span><span>3:47</span></div>
+      </div>
+      <div class="sp-eq" id="sp-eq"></div>
+      <button class="sp-skip" onclick="goToBday()">
+        <i class="fa-solid fa-forward-step"></i> Skip ke Kejutan
+      </button>
+    </section>
 
-<!-- love page -->
-<section id="pg-love" class="pg">
-  <div class="love-orb love-orb1"></div>
-  <div class="love-orb love-orb2"></div>
-  <p class="love-eyebrow"><i class="fa-solid fa-heart-pulse"></i> &nbsp;Love Meter&nbsp; <i class="fa-solid fa-heart-pulse"></i></p>
-  <h2 class="love-title">Seberapa Sayang<br>Kamu Aku?</h2>
-  <div class="love-heart-wrap">
-    <div class="love-glow" id="love-glow"></div>
-    <svg viewBox="0 0 100 100" class="love-svg" id="love-svg">
-      <defs>
-        <clipPath id="heart-clip">
-          <path d="M50 88C25 65 5 50 5 30C5 15 18 5 30 5C40 5 47 12 50 18C53 12 60 5 70 5C82 5 95 15 95 30C95 50 75 65 50 88Z"/>
-        </clipPath>
-        <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#e8857a"/>
-          <stop offset="100%" stop-color="#c4566a"/>
-        </linearGradient>
-      </defs>
-      <path d="M50 88C25 65 5 50 5 30C5 15 18 5 30 5C40 5 47 12 50 18C53 12 60 5 70 5C82 5 95 15 95 30C95 50 75 65 50 88Z"
-            fill="none" stroke="rgba(232,122,165,0.4)" stroke-width="2"/>
-      <rect id="heart-fill" x="0" y="100" width="100" height="100" fill="url(#hg)" clip-path="url(#heart-clip)"/>
-    </svg>
-    <div class="love-pct" id="love-pct">0%</div>
-  </div>
-  <p class="love-msg" id="love-msg">Tekan & tahan buktiin sayangmu...</p>
-  <button class="love-btn" id="love-btn"
-    onmousedown="startLove()" onmouseup="stopLove()" onmouseleave="stopLove()"
-    ontouchstart="startLove()" ontouchend="stopLove()" ontouchcancel="stopLove()">
-    <i class="fa-solid fa-heart"></i> Tahan buktiin cintamu
-  </button>
-</section>
-
-<!-- spotify -->
-<section id="pg-spotify" class="pg">
-  <div class="sp-orb sp-orb1"></div>
-  <div class="sp-orb sp-orb2"></div>
-  <div class="sp-album-wrap">
-    <div class="sp-disc" id="sp-disc">
-      <div class="sp-disc-center"><i class="fa-brands fa-spotify"></i></div>
-    </div>
-    <div class="sp-needle" id="sp-needle"></div>
-  </div>
-  <p class="sp-now-label"><i class="fa-solid fa-circle-play"></i> Sekarang Lagi Memutar</p>
-  <p class="sp-song">Loml</p>
-  <p class="sp-artist">Taylor Swift</p>
-  <div class="sp-controls">
-    <button class="sp-ctrl-btn"><i class="fa-solid fa-shuffle"></i></button>
-    <button class="sp-ctrl-btn"><i class="fa-solid fa-backward-step"></i></button>
-    <button class="sp-play-btn"><i class="fa-solid fa-pause"></i></button>
-    <button class="sp-ctrl-btn"><i class="fa-solid fa-forward-step"></i></button>
-    <button class="sp-ctrl-btn"><i class="fa-solid fa-repeat"></i></button>
-  </div>
-  <div class="sp-timeline">
-    <div class="sp-time-row"><span>0:00</span><span id="sp-now-time">0:00</span></div>
-    <div class="sp-bar"><div class="sp-bar-fill" id="sp-fill"></div></div>
-    <div class="sp-time-row"><span></span><span>3:47</span></div>
-  </div>
-  <div class="sp-eq" id="sp-eq"></div>
-  <button class="sp-skip" onclick="goToBday()"><i class="fa-solid fa-forward-step"></i> Skip ke Kejutan</button>
-</section>
-
-<!-- birthday -->
-<section id="pg-bday" class="pg">
-  <p class="bd-eyebrow"><i class="fa-solid fa-star"></i> &nbsp;You're Invited To&nbsp; <i class="fa-solid fa-star"></i></p>
-  <h1 class="bd-h1">Birthday<br/>Party</h1>
-  <div class="cake-scene">
-    <div class="ck ck1"></div><div class="ck ck2"></div><div class="ck ck3"></div>
-    <div class="ck ck-cr"></div><div class="ck ck-cd"></div>
-    <div class="flame"><div class="flame-g"></div><div class="flame-i"></div></div>
-  </div>
-  <p class="bd-script">Natan 22th Birthday</p>
-  <button class="go-btn" onclick="goToMain()" style="margin-top:22px">
-    <i class="fa-solid fa-door-open"></i> Let's Go Inside!
-  </button>
-</section>
-
-<!-- main -->
-<section id="pg-main" class="pg">
-  <audio id="bgm" src="audio/Taylor Swift - loml (Official Lyric Video) - Taylor Swift.mp3" loop></audio>
-  <div class="main-wrap">
-    <div class="top-bar">
-      <span class="top-logo">Natan</span>
-      <span class="top-date"><i class="fa-regular fa-calendar"></i> 01 Des 2004</span>
-      <div class="top-icon"><i class="fa-solid fa-cake-candles"></i></div>
-    </div>
-
-    <div class="hero-grid">
-      <div class="hero-media">
-        <div class="hero-media-inner" id="video3d">
-          <video src="video/IMG_1898.mp4" autoplay muted loop playsinline></video>
+    <!-- birthday -->
+    <section id="pg-bday" class="pg">
+      <p class="bd-eyebrow">
+        <i class="fa-solid fa-star"></i> &nbsp;You're Invited To&nbsp;
+        <i class="fa-solid fa-star"></i>
+      </p>
+      <h1 class="bd-h1">Birthday<br />Party</h1>
+      <div class="cake-scene">
+        <div class="ck ck1"></div>
+        <div class="ck ck2"></div>
+        <div class="ck ck3"></div>
+        <div class="ck ck-cr"></div>
+        <div class="ck ck-cd"></div>
+        <div class="flame">
+          <div class="flame-g"></div>
+          <div class="flame-i"></div>
         </div>
       </div>
-      <div class="hero-info">
-        <p class="hero-greeting"><i class="fa-solid fa-party-horn"></i> 22th Birthday</p>
-        <h2 class="hero-name"><span>Happy Birthday,</span><br/>Sayang! <i class="fa-solid fa-heart" style="color:var(--rose2)"></i></h2>
-        <div class="cd-card">
-          <div class="cd-icon"><i class="fa-regular fa-hourglass"></i></div>
-          <div class="cd-info">
-            <div class="cd-label"><i class="fa-solid fa-clock"></i> Countdown</div>
-            <div id="countdown">…</div>
+      <p class="bd-script">Anissa Pujiwaty 23th Birthday</p>
+      <button class="go-btn" onclick="goToMain()" style="margin-top: 22px">
+        <i class="fa-solid fa-door-open"></i> Let's Go Inside!
+      </button>
+    </section>
+
+    <!-- main -->
+    <section id="pg-main" class="pg">
+      <audio
+        id="bgm"
+        src="audio/Taylor Swift - loml (Official Lyric Video) - Taylor Swift.mp3"
+        loop
+      ></audio>
+      <div class="main-wrap">
+        <div class="top-bar">
+          <span class="top-logo">Anissa Pujiwaty</span>
+          <span class="top-date"
+            ><i class="fa-regular fa-calendar"></i> 05 July 2003</span
+          >
+          <div class="top-icon"><i class="fa-solid fa-cake-candles"></i></div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-media">
+            <div class="hero-media-inner" id="video3d">
+              <video
+                src="video/IMG_1898.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+          </div>
+          <div class="hero-info">
+            <p class="hero-greeting">
+              <i class="fa-solid fa-party-horn"></i> 23th Birthday
+            </p>
+            <h2 class="hero-name">
+              <span>Happy Birthday,</span><br />Sayang!
+              <i class="fa-solid fa-heart" style="color: var(--rose2)"></i>
+            </h2>
+            <div class="cd-card">
+              <div class="cd-icon"><i class="fa-regular fa-hourglass"></i></div>
+              <div class="cd-info">
+                <div class="cd-label">
+                  <i class="fa-solid fa-clock"></i> Countdown
+                </div>
+                <div id="countdown">.</div>
+              </div>
+            </div>
+            <p class="dob-tag">
+              <i class="fa-solid fa-calendar-heart"></i> 05 July 2003
+            </p>
           </div>
         </div>
-        <p class="dob-tag"><i class="fa-solid fa-calendar-heart"></i> 01 Desember 2004</p>
-      </div>
-    </div>
 
-    <div class="stats-row">
-      <div class="stat-chip">
-        <div class="stat-icon" style="color:var(--rose2)"><i class="fa-solid fa-heart"></i></div>
-        <div class="stat-val">∞</div>
-        <div class="stat-label">Love</div>
-      </div>
-      <div class="stat-chip">
-        <div class="stat-icon" style="color:var(--caramel3)"><i class="fa-solid fa-star"></i></div>
-        <div class="stat-val">22</div>
-        <div class="stat-label">Tahun</div>
-      </div>
-      <div class="stat-chip">
-        <div class="stat-icon" style="color:var(--sage)"><i class="fa-solid fa-cake-candles"></i></div>
-        <div class="stat-val"><i class="fa-solid fa-face-smile-beam" style="color:var(--sage);font-size:1rem"></i></div>
-        <div class="stat-label">Happy</div>
-      </div>
-    </div>
-
-    <div class="mini-player" onclick="toggleMusic()">
-      <div class="mp-inner">
-        <div class="mp-vinyl" id="mp-vinyl"><div class="mp-vinyl-dot"></div></div>
-        <div class="mp-info">
-          <div class="mp-song">Loml — Taylor Swift</div>
-          <div class="mp-artist"><i class="fa-brands fa-spotify" style="color:#1DB954"></i> Diputar spesial untukmu <i class="fa-solid fa-heart" style="color:var(--rose)"></i></div>
-        </div>
-        <div class="mp-controls">
-          <div class="mp-eq" id="mp-eq"></div>
-          <i class="fa-solid fa-volume-high mp-vol" id="vol-ico"></i>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <p class="section-label"><i class="fa-solid fa-compass"></i> Explore</p>
-      <div class="nav-grid">
-        <div class="nav-card nc-dress" onclick="openSlide('sl-dress')">
-          <div class="nc-top">
-            <div class="nc-ico"><i class="fa-solid fa-shirt"></i></div>
-            <div class="nc-arr"><i class="fa-solid fa-arrow-up-right"></i></div>
+        <div class="stats-row">
+          <div class="stat-chip">
+            <div class="stat-icon" style="color: var(--rose2)">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-val">∞</div>
+            <div class="stat-label">Love</div>
           </div>
-          <div>
-            <div class="nc-title">Dresscode</div>
-            <div class="nc-sub"><i class="fa-solid fa-circle" style="color:#1a1a1a;font-size:.5rem"></i> Hitam &amp; <i class="fa-solid fa-circle" style="color:#8b5e3c;font-size:.5rem"></i> Coklat</div>
+          <div class="stat-chip">
+            <div class="stat-icon" style="color: var(--caramel3)">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="stat-val">23</div>
+            <div class="stat-label">Tahun</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-icon" style="color: var(--sage)">
+              <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <div class="stat-val">
+              <i
+                class="fa-solid fa-face-smile-beam"
+                style="color: var(--sage); font-size: 1rem"
+              ></i>
+            </div>
+            <div class="stat-label">Happy</div>
           </div>
         </div>
-        <div class="nav-card nc-foto" onclick="openSlide('sl-foto')">
-          <div class="nc-top">
-            <div class="nc-ico"><i class="fa-solid fa-images"></i></div>
-            <div class="nc-arr"><i class="fa-solid fa-arrow-up-right"></i></div>
-          </div>
-          <div>
-            <div class="nc-title">Photo Dump</div>
-            <div class="nc-sub"><i class="fa-solid fa-camera-retro"></i> Kenangan bareng <i class="fa-solid fa-heart" style="color:var(--rose)"></i></div>
+
+        <div class="mini-player" onclick="toggleMusic()">
+          <div class="mp-inner">
+            <div class="mp-vinyl" id="mp-vinyl">
+              <div class="mp-vinyl-dot"></div>
+            </div>
+            <div class="mp-info">
+              <div class="mp-song">1000x — Ghea Indrawari</div>
+              <div class="mp-artist">
+                <i class="fa-brands fa-spotify" style="color: #1db954"></i>
+                Diputar spesial untukmu
+                <i class="fa-solid fa-heart" style="color: var(--rose)"></i>
+              </div>
+            </div>
+            <div class="mp-controls">
+              <div class="mp-eq" id="mp-eq"></div>
+              <i class="fa-solid fa-volume-high mp-vol" id="vol-ico"></i>
+            </div>
           </div>
         </div>
-        <div class="nav-card nc-letter" onclick="openSlide('sl-letter')">
-          <div class="nc-top">
-            <div class="nc-ico"><i class="fa-solid fa-envelope-open-text"></i></div>
-            <div class="nc-arr"><i class="fa-solid fa-arrow-up-right"></i></div>
-          </div>
-          <div>
-            <div class="nc-title">Surat Untukmu</div>
-            <div class="nc-sub"><i class="fa-solid fa-heart-pulse"></i> Dari hati yang paling dalam</div>
+
+        <div>
+          <p class="section-label">
+            <i class="fa-solid fa-compass"></i> Explore
+          </p>
+          <div class="nav-grid">
+            <div class="nav-card nc-dress" onclick="openSlide('sl-dress')">
+              <div class="nc-top">
+                <div class="nc-ico"><i class="fa-solid fa-shirt"></i></div>
+                <div class="nc-arr">
+                  <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+              </div>
+              <div>
+                <div class="nc-title">Dresscode</div>
+                <div class="nc-sub">
+                  <i
+                    class="fa-solid fa-circle"
+                    style="color: #fffff0; font-size: 0.5rem"
+                  ></i>
+                  Ivory &amp;
+                  <i
+                    class="fa-solid fa-circle"
+                    style="color: #6699cc; font-size: 0.5rem"
+                  ></i>
+                  Blue
+                </div>
+              </div>
+            </div>
+            <div class="nav-card nc-foto" onclick="openSlide('sl-foto')">
+              <div class="nc-top">
+                <div class="nc-ico"><i class="fa-solid fa-images"></i></div>
+                <div class="nc-arr">
+                  <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+              </div>
+              <div>
+                <div class="nc-title">Photo Dump</div>
+                <div class="nc-sub">
+                  <i class="fa-solid fa-camera-retro"></i> Kenangan bareng
+                  <i class="fa-solid fa-heart" style="color: var(--rose)"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-card nc-letter" onclick="openSlide('sl-letter')">
+              <div class="nc-top">
+                <div class="nc-ico">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="nc-arr">
+                  <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+              </div>
+              <div>
+                <div class="nc-title">Love Letter</div>
+                <div class="nc-sub">
+                  <i class="fa-solid fa-heart-pulse"></i> Null
+                </div>
+              </div>
+            </div>
+            <div class="nav-card nc-run" onclick="openSlide('sl-rundown')">
+              <div class="nc-top">
+                <div class="nc-ico">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="nc-arr">
+                  <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+              </div>
+              <div>
+                <div class="nc-title">Rundown</div>
+                <div class="nc-sub">
+                  <i class="fa-solid fa-list-timeline"></i> Timeline acara null
+                </div>
+              </div>
+            </div>
+
+            <!-- KARTU LAPORAN KEUANGAN -->
+            <div
+              class="nav-card nc-laporan"
+              onclick="openSlide('sl-laporan')"
+              style="
+                --nc-clr: rgba(255, 184, 208, 0.15);
+                --nc-border: var(--caramel);
+              "
+            >
+              <div class="nc-top">
+                <div
+                  class="nc-ico"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--caramel),
+                      var(--gold)
+                    );
+                  "
+                >
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <div class="nc-arr">
+                  <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+              </div>
+              <div>
+                <div class="nc-title">Financial Report</div>
+                <div class="nc-sub">
+                  <i class="fa-solid fa-chart-pie"></i> Audited by: Null
+                </div>
+              </div>
+            </div>
+
+            <!-- KARTU SCRATCH CARD -->
+            <div
+              class="nav-card nc-scratch"
+              onclick="
+                openSlide('sl-scratch');
+                setTimeout(initScratchCard, 300);
+              "
+              style="
+                --nc-clr: rgba(212, 107, 138, 0.15);
+                --nc-border: var(--gold);
+              "
+            >
+              <div class="nc-top">
+                <div
+                  class="nc-ico"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--gold),
+                      var(--rose)
+                    );
+                  "
+                >
+                  <i class="fa-solid fa-ticket"></i>
+                </div>
+                <div class="nc-arr">
+                  <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+              </div>
+              <div>
+                <div class="nc-title">Gosok Kado Ini</div>
+                <div class="nc-sub">
+                  <i class="fa-solid fa-hand-sparkles"></i> Ada hadiah spesial
+                  buat kamu!
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="nav-card nc-run" onclick="openSlide('sl-rundown')">
-          <div class="nc-top">
-            <div class="nc-ico"><i class="fa-solid fa-calendar-check"></i></div>
-            <div class="nc-arr"><i class="fa-solid fa-arrow-up-right"></i></div>
+      </div>
+    </section>
+
+    <!-- dresscode -->
+    <section id="sl-dress" class="slide-pg">
+      <div class="sl-topbar">
+        <button class="sl-back" onclick="closeSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="sl-heading">
+          <h2 class="sl-title"><i class="fa-solid fa-shirt"></i> Dresscode</h2>
+          <p class="sl-sub">Look cute, stay coordinated!</p>
+        </div>
+        <div class="sl-spacer"></div>
+      </div>
+      <div class="dress-wrap">
+        <div class="dress-photo">
+          <img
+            src="img/dresscode.png"
+            alt="Dresscode"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="dress-sticker">
+            <i class="fa-solid fa-palette"></i><span>Dress<br />Code</span>
           </div>
-          <div>
-            <div class="nc-title">Rundown</div>
-            <div class="nc-sub"><i class="fa-solid fa-list-timeline"></i> Timeline acara spesial</div>
+        </div>
+        <div class="color-palette">
+          <div class="cp-item">
+            <div
+              class="cp-swatch"
+              style="
+                background: #fffff0;
+                border: 1.5px solid rgba(255, 255, 255, 0.2);
+              "
+            ></div>
+            <span class="cp-name">Ivory</span>
+          </div>
+          <div class="cp-item">
+            <div class="cp-swatch" style="background: #6699cc"></div>
+            <span class="cp-name">Blue</span>
+          </div>
+        </div>
+        <div class="dress-tip">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span
+            >Match the color so we look extra in sync and effortlessly elegant
+            together~ Pakai kombinasi hitam & coklat ya!</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- foto -->
+    <section id="sl-foto" class="slide-pg">
+      <div class="sl-topbar">
+        <button class="sl-back" onclick="closeSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="sl-heading">
+          <h2 class="sl-title">
+            <i class="fa-solid fa-images"></i> Photo Dump
+          </h2>
+          <p class="sl-sub">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Tap foto untuk
+            zoom
+          </p>
+        </div>
+        <div class="sl-spacer"></div>
+      </div>
+      <div class="foto-wrap">
+        <div class="foto-header">
+          <i class="fa-solid fa-heart" style="color: var(--caramel)"></i
+          ><span class="foto-title">Kenangan Kita</span>
+        </div>
+        <div class="pol-grid">
+          <div
+            class="pol tr"
+            style="animation-delay: 0.05s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera1.jpeg" alt="" />
+            <p class="cap">With you, every moment feels like magic.</p>
+          </div>
+          <div
+            class="pol tl"
+            style="animation-delay: 0.1s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera2.jpeg" alt="" />
+            <p class="cap">You are my favorite kind of forever.</p>
+          </div>
+          <div
+            class="pol tr"
+            style="animation-delay: 0.15s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera3.jpeg" alt="" />
+            <p class="cap">Home is not a place, it's you.</p>
+          </div>
+          <div
+            class="pol tl"
+            style="animation-delay: 0.2s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera4.jpeg" alt="" />
+            <p class="cap">Falling for you every single day.</p>
+          </div>
+          <div
+            class="pol tr"
+            style="animation-delay: 0.25s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera5.jpeg" alt="" />
+            <p class="cap">My heart smiles whenever you're near.</p>
+          </div>
+          <div
+            class="pol tl"
+            style="animation-delay: 0.3s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera6.jpeg" alt="" />
+            <p class="cap">You make ordinary days feel extraordinary.</p>
+          </div>
+          <div
+            class="pol tr"
+            style="animation-delay: 0.35s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera7.jpeg" alt="" />
+            <p class="cap">In your arms, I found my safe place.</p>
+          </div>
+          <div
+            class="pol tl"
+            style="animation-delay: 0.4s"
+            onclick="openLB(this)"
+          >
+            <img src="img/hera8.jpeg" alt="" />
+            <p class="cap">Loving you is my favorite adventure.</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- dresscode -->
-<section id="sl-dress" class="slide-pg">
-  <div class="sl-topbar">
-    <button class="sl-back" onclick="closeSlide()"><i class="fa-solid fa-arrow-left"></i></button>
-    <div class="sl-heading">
-      <h2 class="sl-title"><i class="fa-solid fa-shirt"></i> Dresscode</h2>
-      <p class="sl-sub">Look cute, stay coordinated!</p>
-    </div>
-    <div class="sl-spacer"></div>
-  </div>
-  <div class="dress-wrap">
-    <div class="dress-photo">
-      <img src="img/dresscode.png" alt="Dresscode" onerror="this.style.display='none'"/>
-      <div class="dress-sticker"><i class="fa-solid fa-palette"></i><span>Dress<br/>Code</span></div>
-    </div>
-    <div class="color-palette">
-      <div class="cp-item">
-        <div class="cp-swatch" style="background:#1a1a1a;border:1.5px solid rgba(255,255,255,.2)"></div>
-        <span class="cp-name">Hitam</span>
-      </div>
-      <div class="cp-item">
-        <div class="cp-swatch" style="background:#8b5e3c"></div>
-        <span class="cp-name">Coklat</span>
-      </div>
-    </div>
-    <div class="dress-tip">
-      <i class="fa-solid fa-wand-magic-sparkles"></i>
-      <span>Match the color so we look extra in sync and effortlessly elegant together~ Pakai kombinasi hitam & coklat ya!</span>
-    </div>
-  </div>
-</section>
-
-<!-- foto -->
-<section id="sl-foto" class="slide-pg">
-  <div class="sl-topbar">
-    <button class="sl-back" onclick="closeSlide()"><i class="fa-solid fa-arrow-left"></i></button>
-    <div class="sl-heading">
-      <h2 class="sl-title"><i class="fa-solid fa-images"></i> Photo Dump</h2>
-      <p class="sl-sub"><i class="fa-solid fa-magnifying-glass-plus"></i> Tap foto untuk zoom</p>
-    </div>
-    <div class="sl-spacer"></div>
-  </div>
-  <div class="foto-wrap">
-    <div class="foto-header"><i class="fa-solid fa-heart" style="color:var(--caramel)"></i><span class="foto-title">Kenangan Kita</span></div>
-    <div class="pol-grid">
-      <div class="pol tr" style="animation-delay:.05s" onclick="openLB(this)"><img src="img/hera1.jpeg" alt=""/><p class="cap">With you, every moment feels like magic.</p></div>
-      <div class="pol tl" style="animation-delay:.1s" onclick="openLB(this)"><img src="img/hera2.jpeg" alt=""/><p class="cap">You are my favorite kind of forever.</p></div>
-      <div class="pol tr" style="animation-delay:.15s" onclick="openLB(this)"><img src="img/hera3.jpeg" alt=""/><p class="cap">Home is not a place, it's you.</p></div>
-      <div class="pol tl" style="animation-delay:.2s" onclick="openLB(this)"><img src="img/hera4.jpeg" alt=""/><p class="cap">Falling for you every single day.</p></div>
-      <div class="pol tr" style="animation-delay:.25s" onclick="openLB(this)"><img src="img/hera5.jpeg" alt=""/><p class="cap">My heart smiles whenever you're near.</p></div>
-      <div class="pol tl" style="animation-delay:.3s" onclick="openLB(this)"><img src="img/hera6.jpeg" alt=""/><p class="cap">You make ordinary days feel extraordinary.</p></div>
-      <div class="pol tr" style="animation-delay:.35s" onclick="openLB(this)"><img src="img/hera7.jpeg" alt=""/><p class="cap">In your arms, I found my safe place.</p></div>
-      <div class="pol tl" style="animation-delay:.4s" onclick="openLB(this)"><img src="img/hera8.jpeg" alt=""/><p class="cap">Loving you is my favorite adventure.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- surat -->
-<section id="sl-letter" class="slide-pg">
-  <div class="sl-topbar">
-    <button class="sl-back" onclick="closeSlide()"><i class="fa-solid fa-arrow-left"></i></button>
-    <div class="sl-heading">
-      <h2 class="sl-title"><i class="fa-solid fa-envelope-open-text"></i> Surat Untukmu</h2>
-      <p class="sl-sub"><i class="fa-solid fa-heart" style="color:var(--rose)"></i> Dari hati yang paling dalam</p>
-    </div>
-    <div class="sl-spacer"></div>
-  </div>
-  <div class="letter-wrap">
-    <div class="letter-card">
-      <div class="letter-header">
-        <div class="letter-envelope"><i class="fa-solid fa-envelope-open"></i></div>
-        <div class="letter-for">
-          <div class="letter-to">Kepada Yth.</div>
-          <div class="letter-name">Ocva Relanno 💛</div>
+    <!-- surat -->
+    <section id="sl-letter" class="slide-pg">
+      <div class="sl-topbar">
+        <button class="sl-back" onclick="closeSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="sl-heading">
+          <h2 class="sl-title">
+            <i class="fa-solid fa-envelope-open-text"></i> Surat Untukmu
+          </h2>
+          <p class="sl-sub">
+            <i class="fa-solid fa-heart" style="color: var(--rose)"></i> Dari
+            hati yang paling dalam
+          </p>
         </div>
-        <i class="fa-solid fa-heart" style="color:var(--rose2);opacity:.5"></i>
+        <div class="sl-spacer"></div>
       </div>
-      <p id="typed-txt"></p><span class="blink-cur" id="bcur"></span>
-    </div>
-  </div>
-</section>
+      <div class="letter-wrap">
+        <div class="letter-card">
+          <div class="letter-header">
+            <div class="letter-envelope">
+              <i class="fa-solid fa-envelope-open"></i>
+            </div>
+            <div class="letter-for">
+              <div class="letter-to">Kepada Yth.</div>
+              <div class="letter-name">Ocva Relanno 💛</div>
+            </div>
+            <i
+              class="fa-solid fa-heart"
+              style="color: var(--rose2); opacity: 0.5"
+            ></i>
+          </div>
+          <p id="typed-txt"></p>
+          <span class="blink-cur" id="bcur"></span>
+        </div>
+      </div>
+    </section>
 
-<!-- rundown -->
-<section id="sl-rundown" class="slide-pg">
-  <div class="sl-topbar">
-    <button class="sl-back" onclick="closeSlide()"><i class="fa-solid fa-arrow-left"></i></button>
-    <div class="sl-heading">
-      <h2 class="sl-title"><i class="fa-solid fa-calendar-check"></i> Rundown</h2>
-      <p class="sl-sub"><i class="fa-solid fa-party-horn" style="color:var(--caramel3)"></i> Can't wait to share this moment!</p>
-    </div>
-    <div class="sl-spacer"></div>
-  </div>
-  <div class="run-wrap">
-    <img src="img/rondown.png" alt="Rundown" class="run-img" onerror="this.style.display='none'"/>
-    <div class="timeline">
-      <div class="tl-item" style="animation-delay:.06s">
-        <div class="tl-dot" style="background:var(--caramel3)"></div>
-        <div class="tl-time"><i class="fa-solid fa-door-open"></i> Registrasi</div>
-        <div class="tl-act">Welcome &amp; Check-in <i class="fa-solid fa-ribbon" style="color:var(--rose2)"></i></div>
-        <div class="tl-desc">Foto-foto dulu sebelum mulai!</div>
+    <!-- rundown -->
+    <section id="sl-rundown" class="slide-pg">
+      <div class="sl-topbar">
+        <button class="sl-back" onclick="closeSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="sl-heading">
+          <h2 class="sl-title">
+            <i class="fa-solid fa-calendar-check"></i> Rundown
+          </h2>
+          <p class="sl-sub">
+            <i
+              class="fa-solid fa-party-horn"
+              style="color: var(--caramel3)"
+            ></i>
+            Can't wait to share this moment!
+          </p>
+        </div>
+        <div class="sl-spacer"></div>
       </div>
-      <div class="tl-item" style="animation-delay:.12s">
-        <div class="tl-dot" style="background:var(--terracotta)"></div>
-        <div class="tl-time"><i class="fa-solid fa-cake-candles"></i> Acara Utama</div>
-        <div class="tl-act">Birthday Celebration <i class="fa-solid fa-cake-candles" style="color:var(--caramel3)"></i></div>
-        <div class="tl-desc">Tiup lilin, potong kue, dan doa bersama!</div>
+      <div class="run-wrap">
+        <img
+          src="img/rondown.png"
+          alt="Rundown"
+          class="run-img"
+          onerror="this.style.display = 'none'"
+        />
+        <div class="timeline">
+          <div class="tl-item" style="animation-delay: 0.06s">
+            <div class="tl-dot" style="background: var(--caramel3)"></div>
+            <div class="tl-time">
+              <i class="fa-solid fa-door-open"></i> Registrasi
+            </div>
+            <div class="tl-act">
+              Welcome &amp; Check-in
+              <i class="fa-solid fa-ribbon" style="color: var(--rose2)"></i>
+            </div>
+            <div class="tl-desc">Foto-foto dulu sebelum mulai!</div>
+          </div>
+          <div class="tl-item" style="animation-delay: 0.12s">
+            <div class="tl-dot" style="background: var(--terracotta)"></div>
+            <div class="tl-time">
+              <i class="fa-solid fa-cake-candles"></i> Acara Utama
+            </div>
+            <div class="tl-act">
+              Birthday Celebration
+              <i
+                class="fa-solid fa-cake-candles"
+                style="color: var(--caramel3)"
+              ></i>
+            </div>
+            <div class="tl-desc">Tiup lilin, potong kue, dan doa bersama!</div>
+          </div>
+          <div class="tl-item" style="animation-delay: 0.18s">
+            <div class="tl-dot" style="background: var(--gold)"></div>
+            <div class="tl-time"><i class="fa-solid fa-gamepad"></i> Games</div>
+            <div class="tl-act">
+              Sesi Games Seru
+              <i class="fa-solid fa-gamepad" style="color: var(--gold2)"></i>
+            </div>
+            <div class="tl-desc">Yang kalah nge-treat yang lain ya~</div>
+          </div>
+          <div class="tl-item" style="animation-delay: 0.24s">
+            <div class="tl-dot" style="background: var(--sage)"></div>
+            <div class="tl-time"><i class="fa-solid fa-gift"></i> Surprise</div>
+            <div class="tl-act">
+              Kejutan Spesial
+              <i class="fa-solid fa-gift" style="color: var(--sage)"></i>
+            </div>
+            <div class="tl-desc">Ada sesuatu yang sudah disiapkan untukmu…</div>
+          </div>
+        </div>
+        <p class="run-note">
+          <i class="fa-solid fa-circle-info"></i> rundown bisa berubah
+          sewaktu-waktu
+        </p>
       </div>
-      <div class="tl-item" style="animation-delay:.18s">
-        <div class="tl-dot" style="background:var(--gold)"></div>
-        <div class="tl-time"><i class="fa-solid fa-gamepad"></i> Games</div>
-        <div class="tl-act">Sesi Games Seru <i class="fa-solid fa-gamepad" style="color:var(--gold2)"></i></div>
-        <div class="tl-desc">Yang kalah nge-treat yang lain ya~</div>
-      </div>
-      <div class="tl-item" style="animation-delay:.24s">
-        <div class="tl-dot" style="background:var(--sage)"></div>
-        <div class="tl-time"><i class="fa-solid fa-gift"></i> Surprise</div>
-        <div class="tl-act">Kejutan Spesial <i class="fa-solid fa-gift" style="color:var(--sage)"></i></div>
-        <div class="tl-desc">Ada sesuatu yang sudah disiapkan untukmu…</div>
-      </div>
-    </div>
-    <p class="run-note"><i class="fa-solid fa-circle-info"></i> rundown bisa berubah sewaktu-waktu</p>
-  </div>
-</section>
+    </section>
 
-<script src="script.js"></script>
-</body>
+    <!-- laporan keuangan -->
+    <section id="sl-laporan" class="slide-pg">
+      <div class="sl-topbar">
+        <button class="sl-back" onclick="closeSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div
+          class="sl-heading"
+          style="padding: 0 10px; text-align: center; max-width: 75%"
+        >
+          <h2 class="sl-title">
+            <i class="fa-solid fa-file-invoice-dollar"></i> Financial Report
+          </h2>
+          <p class="sl-sub" style="margin-top: 4px; font-size: 0.75rem">
+            <i
+              class="fa-solid fa-scale-balanced"
+              style="color: var(--caramel3)"
+            ></i>
+            Laba Rugi Hubungan Kita
+          </p>
+        </div>
+        <div class="sl-spacer"></div>
+      </div>
+
+      <div
+        class="laporan-wrap"
+        style="max-width: 460px; width: 100%; position: relative; z-index: 2"
+      >
+        <div
+          style="
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(232, 122, 165, 0.15);
+            border-radius: 20px;
+            padding: 24px 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 50px rgba(232, 122, 165, 0.12);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              border-bottom: 2px dashed rgba(232, 122, 165, 0.3);
+              padding-bottom: 15px;
+            "
+          >
+            <h3
+              style="
+                font-family: &quot;Poppins&quot;, sans-serif;
+                font-weight: 700;
+                color: var(--text);
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+              "
+            >
+              Laporan Laba/Rugi
+            </h3>
+            <p
+              style="
+                font-size: 0.75rem;
+                color: var(--text-light);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+              "
+            >
+              Periode: Hari Pertama Jadian - Selamanya
+            </p>
+          </div>
+
+          <table
+            style="
+              width: 100%;
+              font-size: 0.85rem;
+              color: var(--text);
+              border-collapse: collapse;
+            "
+          >
+            <tbody>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-weight: 700;
+                    padding: 5px 0 10px;
+                    color: var(--caramel3);
+                    font-size: 0.8rem;
+                    letter-spacing: 1px;
+                  "
+                >
+                  PENDAPATAN (REVENUE)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0 8px 10px">
+                  Waktu Luang & Jalan-jalan
+                </td>
+                <td style="text-align: right; font-weight: 600; color: #28a745">
+                  + Rp 500.000
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0 8px 10px">
+                  Deep Talk & Support System
+                </td>
+                <td style="text-align: right; font-weight: 600; color: #28a745">
+                  + Rp 350.000
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px 0;
+                    font-weight: 700;
+                    border-top: 1px solid rgba(232, 122, 165, 0.2);
+                  "
+                >
+                  Total Pendapatan
+                </td>
+                <td
+                  style="
+                    text-align: right;
+                    font-weight: 700;
+                    border-top: 1px solid rgba(232, 122, 165, 0.2);
+                    color: #28a745;
+                  "
+                >
+                  + Rp 850.000
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-weight: 700;
+                    padding: 20px 0 10px;
+                    color: var(--terracotta);
+                    font-size: 0.8rem;
+                    letter-spacing: 1px;
+                  "
+                >
+                  BEBAN (EXPENSES)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0 8px 10px">Beban Ngambek Random</td>
+                <td style="text-align: right; font-weight: 600; color: #dc3545">
+                  - Rp 50.000
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0 8px 10px">Biaya Jajan Coklat</td>
+                <td style="text-align: right; font-weight: 600; color: #dc3545">
+                  - Rp 150.000
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px 0;
+                    font-weight: 700;
+                    border-top: 1px solid rgba(232, 122, 165, 0.2);
+                  "
+                >
+                  Total Beban
+                </td>
+                <td
+                  style="
+                    text-align: right;
+                    font-weight: 700;
+                    border-top: 1px solid rgba(232, 122, 165, 0.2);
+                    color: #dc3545;
+                  "
+                >
+                  - Rp 200.000
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td
+                  style="
+                    padding: 20px 0 5px;
+                    font-family: &quot;Poppins&quot;, sans-serif;
+                    font-weight: 800;
+                    font-size: 1rem;
+                    color: var(--text);
+                  "
+                >
+                  LABA BERSIH HATI
+                </td>
+                <td
+                  style="
+                    padding: 20px 0 5px;
+                    text-align: right;
+                    font-family: &quot;Poppins&quot;, sans-serif;
+                    font-weight: 800;
+                    font-size: 1.3rem;
+                    color: var(--caramel3);
+                    text-shadow: 0 2px 10px rgba(232, 122, 165, 0.3);
+                  "
+                >
+                  ♾️ Unlimited
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <div
+            style="
+              margin-top: 25px;
+              background: rgba(255, 184, 208, 0.15);
+              border: 1px solid rgba(255, 184, 208, 0.25);
+              border-radius: 12px;
+              padding: 15px;
+              text-align: center;
+              font-size: 0.78rem;
+              font-style: italic;
+              color: var(--text-light);
+              line-height: 1.6;
+            "
+          >
+            "Satu-satunya aset yang nilainya gak akan pernah kena depresiasi
+            adalah kehadiran kamu di hidup aku."
+            <i class="fa-solid fa-heart" style="color: var(--rose)"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scratch card slide -->
+    <section id="sl-scratch" class="slide-pg">
+      <div class="sl-topbar">
+        <button class="sl-back" onclick="closeSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <!-- Pembungkusnya tetep dikasih max-width biar aman dari tombol back -->
+        <div
+          class="sl-heading"
+          style="padding: 0 10px; text-align: center; max-width: 75%"
+        >
+          <!-- Hapus inline style font-size di sini biar ukurannya ngikutin class .sl-title bawaan -->
+          <h2 class="sl-title">
+            <i class="fa-solid fa-ticket"></i> Lucky Vouchers
+          </h2>
+          <p class="sl-sub" style="margin-top: 4px; font-size: 0.75rem">
+            Gosok semua vouchernya pelan-pelan!
+          </p>
+        </div>
+        <div class="sl-spacer"></div>
+      </div>
+
+      <div
+        class="scratch-container"
+        style="
+          max-width: 360px;
+          width: 100%;
+          margin: 10px auto;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 0 10px;
+        "
+      >
+        <!-- VOUCHER 1 -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 110px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(232, 122, 165, 0.15);
+            border: 2px dashed rgba(232, 122, 165, 0.4);
+          "
+        >
+          <!-- Isi Voucher 1 -->
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(135deg, #fff5f8, #ffe0eb);
+              display: flex;
+              align-items: center;
+              padding: 15px;
+              z-index: 1;
+            "
+          >
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                flex-shrink: 0;
+              "
+            >
+              <i
+                class="fa-solid fa-face-grin-stars"
+                style="font-size: 1.5rem; color: var(--caramel3)"
+              ></i>
+            </div>
+            <div>
+              <h3
+                style="
+                  font-family: &quot;Poppins&quot;, sans-serif;
+                  font-size: 1.1rem;
+                  color: var(--text);
+                  font-weight: 800;
+                  margin-bottom: 4px;
+                "
+              >
+                Bebas Ngambek
+              </h3>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--text-light);
+                  line-height: 1.3;
+                "
+              >
+                Valid 24 jam bebas ngambek tanpa alesan
+              </p>
+            </div>
+          </div>
+          <!-- Pelindung Voucher 1 -->
+          <canvas
+            class="scratch-canvas"
+            style="
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 2;
+              cursor: pointer;
+            "
+          ></canvas>
+        </div>
+
+        <!-- VOUCHER 2 -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 110px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(232, 122, 165, 0.15);
+            border: 2px dashed rgba(232, 122, 165, 0.4);
+          "
+        >
+          <!-- Isi Voucher 2 -->
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(135deg, #fff5f8, #ffe0eb);
+              display: flex;
+              align-items: center;
+              padding: 15px;
+              z-index: 1;
+            "
+          >
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                flex-shrink: 0;
+              "
+            >
+              <i
+                class="fa-solid fa-ice-cream"
+                style="font-size: 1.5rem; color: var(--caramel3)"
+              ></i>
+            </div>
+            <div>
+              <h3
+                style="
+                  font-family: &quot;Poppins&quot;, sans-serif;
+                  font-size: 1.1rem;
+                  color: var(--text);
+                  font-weight: 800;
+                  margin-bottom: 4px;
+                "
+              >
+                Jajan
+              </h3>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--text-light);
+                  line-height: 1.3;
+                "
+              >
+                Voucher dituker sama es krim atau coklat.
+              </p>
+            </div>
+          </div>
+          <!-- Pelindung Voucher 2 -->
+          <canvas
+            class="scratch-canvas"
+            style="
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 2;
+              cursor: pointer;
+            "
+          ></canvas>
+        </div>
+
+        <!-- VOUCHER 3 -->
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 110px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(232, 122, 165, 0.15);
+            border: 2px dashed rgba(232, 122, 165, 0.4);
+          "
+        >
+          <!-- Isi Voucher 3 -->
+          <div
+            style="
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(135deg, #fff5f8, #ffe0eb);
+              display: flex;
+              align-items: center;
+              padding: 15px;
+              z-index: 1;
+            "
+          >
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                flex-shrink: 0;
+              "
+            >
+              <i
+                class="fa-solid fa-film"
+                style="font-size: 1.5rem; color: var(--caramel3)"
+              ></i>
+            </div>
+            <div>
+              <h3
+                style="
+                  font-family: &quot;Poppins&quot;, sans-serif;
+                  font-size: 1.1rem;
+                  color: var(--text);
+                  font-weight: 800;
+                  margin-bottom: 4px;
+                "
+              >
+                Movie Date
+              </h3>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--text-light);
+                  line-height: 1.3;
+                "
+              >
+                Bebas pilih film yang mau ditonton minggu ini.
+              </p>
+            </div>
+          </div>
+          <!-- Pelindung Voucher 3 -->
+          <canvas
+            class="scratch-canvas"
+            style="
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 2;
+              cursor: pointer;
+            "
+          ></canvas>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
