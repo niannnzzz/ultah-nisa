@@ -269,7 +269,7 @@ function stopLove() {
     loveComplete();
   } else if (loveProgress > 15) {
     document.getElementById("love-msg").textContent =
-      "Yah... kurang sayang nampaknya 😢";
+      "Yah... kurang sayang kayaknya 😢";
     drainHeart();
   } else {
     drainHeart();
@@ -494,7 +494,9 @@ function toggleMusic() {
 
 function startCountdown() {
   const el = document.getElementById("countdown");
-  const t = new Date("2026-7-05T00:00:00").getTime();
+
+  if (!el) return;
+  const t = new Date("2026-07-05T00:00:00").getTime();
   function tick() {
     const d = t - Date.now();
     if (d < 0) {
@@ -519,6 +521,7 @@ function startCountdown() {
   tick();
   setInterval(tick, 1000);
 }
+startCountdown();
 
 function showPg(id) {
   document.querySelectorAll(".pg").forEach((p) => p.classList.remove("on"));
@@ -548,17 +551,10 @@ function goToBday() {
   setTimeout(startCake, 350);
 }
 
-const LTR = `"Sayang, selamat ulang tahun! Hari ini tuh hari yang selalu aku tunggu, karna hari ini hari dimana orang yang paling aku sayang lahir ke dunia. Aku bener-bener bersyukur bisa ketemu kamu, bisa kenal kamu, dan akhirnya bisa bareng sama kamu sampai sekarang.
+const LTR = `"null
+NULL
 
-Rasanya tuh aku beruntung banget punya kamu di hidupku. Kamu yang selalu bikin aku ketawa, bikin aku semangat, bahkan pas hari-hari aku lagi capek banget.
-
-Aku cuma mau bilang terima kasih karena kamu selalu ada buat aku, selalu ngerti aku, dan nggak pernah ninggalin aku walaupun kadang aku bikin kamu kesel. Kamu tuh rumah buat aku, tempat aku bisa jadi diri sendiri tanpa takut dihakimin.
-
-Semoga di umurmu yang sekarang ini, semua yang kamu harapin pelan-pelan bisa tercapai. Aku doain kamu sehat selalu, makin bahagia, makin kuat, dan makin yakin sama jalan hidupmu.
-
-Aku nggak bisa janji apa-apa yang besar, tapi aku janji bakal terus nemenin kamu, dukung kamu, dan sayang sama kamu tanpa alasan. Aku pengen kita terus bareng-bareng sampai nanti.
-
-Selamat ulang tahun sekali lagi ya cintaku, aku sayang kamu lebih dari yang bisa aku ucapin ❤"`;
+NULL❤"`;
 let ti = 0,
   tt = null;
 function startTyping() {

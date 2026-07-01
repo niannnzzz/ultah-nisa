@@ -72,7 +72,7 @@
       <div class="quiz-shell">
         <div class="quiz-header">
           <div class="quiz-badge"><i class="fa-solid fa-fire"></i> Kuis~</div>
-          <span class="quiz-counter" id="q-counter">1 / 7</span>
+          <span class="quiz-counter" id="q-counter">1 / 3</span>
         </div>
         <div class="quiz-prog">
           <div class="quiz-prog-fill" id="quiz-fill"></div>
@@ -103,8 +103,7 @@
             margin-top: 4px;
           "
         >
-          <i class="fa-solid fa-face-smile-wink"></i> Jawab jujur ya... kalau
-          berani lol
+          <i class="fa-solid fa-face-smile-wink"></i> Jangan sampai salah ya ☺️
         </p>
       </div>
     </section>
@@ -176,7 +175,7 @@
         <div class="sp-needle" id="sp-needle"></div>
       </div>
       <p class="sp-now-label">
-        <i class="fa-solid fa-circle-play"></i> Sekarang Lagi Memutar
+        <i class="fa-solid fa-circle-play"></i> Now Playing...
       </p>
       <p class="sp-song">1000x</p>
       <p class="sp-artist">Ghea Indrawari</p>
@@ -196,7 +195,7 @@
           <span>0:00</span><span id="sp-now-time">0:00</span>
         </div>
         <div class="sp-bar"><div class="sp-bar-fill" id="sp-fill"></div></div>
-        <div class="sp-time-row"><span></span><span>3:47</span></div>
+        <div class="sp-time-row"><span></span><span>4:10</span></div>
       </div>
       <div class="sp-eq" id="sp-eq"></div>
       <button class="sp-skip" onclick="goToBday()">
@@ -230,16 +229,12 @@
 
     <!-- main -->
     <section id="pg-main" class="pg">
-      <audio
-        id="bgm"
-        src="audio/Taylor Swift - loml (Official Lyric Video) - Taylor Swift.mp3"
-        loop
-      ></audio>
+      <audio id="bgm" src="audio/Ghea Indrawari - 1000X.mp3" loop></audio>
       <div class="main-wrap">
         <div class="top-bar">
           <span class="top-logo">Anissa Pujiwaty</span>
           <span class="top-date"
-            ><i class="fa-regular fa-calendar"></i> 05 July 2003</span
+            ><i class="fa-regular fa-calendar"></i> 05 July 2026</span
           >
           <div class="top-icon"><i class="fa-solid fa-cake-candles"></i></div>
         </div>
@@ -274,7 +269,7 @@
               </div>
             </div>
             <p class="dob-tag">
-              <i class="fa-solid fa-calendar-heart"></i> 05 July 2003
+              <i class="fa-solid fa-calendar-heart"></i> 05 July 2026
             </p>
           </div>
         </div>
@@ -366,7 +361,7 @@
               <div>
                 <div class="nc-title">Photo Dump</div>
                 <div class="nc-sub">
-                  <i class="fa-solid fa-camera-retro"></i> Kenangan bareng
+                  <i class="fa-solid fa-camera-retro"></i> our memories
                   <i class="fa-solid fa-heart" style="color: var(--rose)"></i>
                 </div>
               </div>
@@ -374,7 +369,16 @@
 
             <div class="nav-card nc-letter" onclick="openSlide('sl-letter')">
               <div class="nc-top">
-                <div class="nc-ico">
+                <div
+                  class="nc-ico dark-pink"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--caramel),
+                      var(--gold)
+                    );
+                  "
+                >
                   <i class="fa-solid fa-envelope-open-text"></i>
                 </div>
                 <div class="nc-arr">
@@ -434,7 +438,7 @@
               <div>
                 <div class="nc-title">Financial Report</div>
                 <div class="nc-sub">
-                  <i class="fa-solid fa-chart-pie"></i> Audited by: Null
+                  <i class="fa-solid fa-chart-pie"></i> Audited by: Zidan
                 </div>
               </div>
             </div>
@@ -469,7 +473,7 @@
                 </div>
               </div>
               <div>
-                <div class="nc-title">Gosok Kado Ini</div>
+                <div class="nc-title">Lucky Vouchers</div>
                 <div class="nc-sub">
                   <i class="fa-solid fa-hand-sparkles"></i> Ada hadiah spesial
                   buat kamu!
@@ -550,7 +554,7 @@
       <div class="foto-wrap">
         <div class="foto-header">
           <i class="fa-solid fa-heart" style="color: var(--caramel)"></i
-          ><span class="foto-title">Kenangan Kita</span>
+          ><span class="foto-title">Our memories</span>
         </div>
         <div class="pol-grid">
           <div
@@ -559,7 +563,7 @@
             onclick="openLB(this)"
           >
             <img src="img/hera1.jpeg" alt="" />
-            <p class="cap">With you, every moment feels like magic.</p>
+            <p class="cap">You are my favorite kind of forever.</p>
           </div>
           <div
             class="pol tl"
@@ -567,7 +571,7 @@
             onclick="openLB(this)"
           >
             <img src="img/hera2.jpeg" alt="" />
-            <p class="cap">You are my favorite kind of forever.</p>
+            <p class="cap">With you, every moment feels like magic.</p>
           </div>
           <div
             class="pol tr"
@@ -583,7 +587,7 @@
             onclick="openLB(this)"
           >
             <img src="img/hera4.jpeg" alt="" />
-            <p class="cap">Falling for you every single day.</p>
+            <p class="cap">You make ordinary days feel extraordinary.</p>
           </div>
           <div
             class="pol tr"
@@ -599,7 +603,7 @@
             onclick="openLB(this)"
           >
             <img src="img/hera6.jpeg" alt="" />
-            <p class="cap">You make ordinary days feel extraordinary.</p>
+            <p class="cap">Falling for you every single day.</p>
           </div>
           <div
             class="pol tr"
@@ -645,8 +649,8 @@
               <i class="fa-solid fa-envelope-open"></i>
             </div>
             <div class="letter-for">
-              <div class="letter-to">Kepada Yth.</div>
-              <div class="letter-name">Ocva Relanno 💛</div>
+              <div class="letter-to">Dear</div>
+              <div class="letter-name">Anissa Pujiwaty</div>
             </div>
             <i
               class="fa-solid fa-heart"
