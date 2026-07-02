@@ -169,7 +169,7 @@ const Qs = [
 ];
 const LETTERS = ["A", "B", "C", "D"];
 const RC = [
-  "Real ones tau kamu jawab ini dengan penuh penghayatan 🥺",
+  "Aku tau kamu jawabnya sambil senyum-senyum 🥳",
   /* 'Kamu tuh bisa jadi konten kreator "Day in My Life" 💅',
   'Selamat! Kamu lulus ujian kejujuran (hampir)',
   'Aku tau kamu skip beberapa jawaban yang paling jujur 😏',
@@ -215,7 +215,7 @@ function pickA(btn, selectedIndex, correctIndex) {
     }, 720);
   } else {
     // KALAU SALAH: Munculin pesan dan biarin dia nebak lagi
-    alert("Teeeet! Salah sayang 😜 Inget-inget lagi coba!");
+    alert("Tetot!!! Salah sayang 😜 inget-inget lagi coba!");
 
     // Opsional: Bikin tombol yang salah jadi warna merah sebentar terus balik lagi
     btn.style.borderColor = "red";
