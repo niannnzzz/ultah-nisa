@@ -93,30 +93,39 @@ for (let i = 0; i < 70; i++) pts.push(mkP());
 // ubah pin
 const PASS = "050703";
 let inp = "";
+
 function updateDots() {
   for (let i = 0; i < 6; i++) {
     const d = document.getElementById("pd" + i);
-    const was = d.classList.contains("filled");
-    const now = i < inp.length;
-    if (now !== was) {
-      d.classList.toggle("filled", now);
+    // Kalau index kurang dari panjang input, ubah jadi love pink
+    if (i < inp.length) {
+      d.innerText = "💖";
+    } else {
+      // Kalau belum diketik, balik ke love putih
+      d.innerText = "🤍";
     }
   }
 }
+
 function pk(n) {
   if (inp.length < 6) {
     inp += n;
     updateDots();
+
+    // Efek lompat pas dipencet
     const d = document.getElementById("pd" + (inp.length - 1));
     d.style.transform = "scale(1.4)";
     setTimeout(() => (d.style.transform = ""), 150);
+
     if (inp.length === 6) setTimeout(chkPw, 300);
   }
 }
+
 function clr() {
   inp = "";
   updateDots();
 }
+
 function chkPw() {
   if (inp === PASS) {
     showPg("pg-quiz");
@@ -126,30 +135,38 @@ function chkPw() {
     e.innerHTML = '<i class="fa-solid fa-xmark"></i> Salah nih! Coba lagi~';
     e.className = "err do-shake";
     document.getElementById("pin-dots").classList.add("do-shake");
+
+    // Ubah semua jadi broken heart pas error
     for (let i = 0; i < 6; i++) {
       const d = document.getElementById("pd" + i);
-      d.style.background = "var(--blush)";
-      d.style.borderColor = "var(--blush)";
-      d.style.boxShadow = "0 0 12px rgba(232,133,122,.6)";
+      d.innerText = "💔";
+      d.style.transform = "scale(1.2)";
     }
+
     setTimeout(() => {
       e.className = "err";
       e.innerHTML = "";
       document.getElementById("pin-dots").classList.remove("do-shake");
+
+      // Balikin ukuran ke normal
       for (let i = 0; i < 6; i++) {
         const d = document.getElementById("pd" + i);
-        d.style.background = "";
-        d.style.borderColor = "";
-        d.style.boxShadow = "";
+        d.style.transform = "";
       }
+      clr(); // Fungsi ini otomatis balikin icon ke 🤍
     }, 1800);
-    clr();
   }
 }
 
 const Qs = [
   {
-    icon: "fa-heart",
+    icon: "fa-store",
+    q: "Dimana tempat pertama kali kita ketemu setelah dari warpat?",
+    o: ["Warkop Pondok ijo", "Mixue", "Kantin Kampus", "Warkop PTI"],
+    correct: 3,
+  },
+  {
+    icon: "fa-person-skating",
     q: "Dimana tempat pertama kali kita ngedate pas aku udah suka sama km?",
     o: ["Lawson", "Ice Skating", "Jatinangor", "Family Mart"],
     correct: 1,
@@ -161,12 +178,19 @@ const Qs = [
     correct: 0,
   },
   {
-    icon: "fa-bookmark",
+    icon: "fa-face-laugh-squint",
     q: "Kamu suka sama aku karna apa?",
     o: ["Lucu 🤪", "Imut 🥺", "Ganteng 😎", "Semua benar"],
     correct: 3,
   },
+  {
+    icon: "fa-face-grin-tongue-squint",
+    q: "Kalo kita ngedate siapa yang paling sering ngomong TERSERAH?",
+    o: ["Nissa", "Nissa", "Nissa", "Nissa"],
+    correct: [0, 1, 2, 3],
+  },
 ];
+
 const LETTERS = ["A", "B", "C", "D"];
 const RC = [
   "Aku tau kamu jawabnya sambil senyum-senyum 🥳",
@@ -202,9 +226,16 @@ function renderQ() {
     op.appendChild(b);
   });
 }
+
 function pickA(btn, selectedIndex, correctIndex) {
-  // Cek apakah jawaban yang dipilih sama dengan kunci jawaban
-  if (selectedIndex === correctIndex) {
+  // MODIFIKASI: Bikin variabel buat ngecek jawaban benar.
+  // Sistem bakal ngecek apakah jawabannya angka tunggal (normal)
+  // ATAU bentuk array (jebakan/banyak jawaban benar)
+  const isCorrect =
+    selectedIndex === correctIndex ||
+    (Array.isArray(correctIndex) && correctIndex.includes(selectedIndex));
+
+  if (isCorrect) {
     // KALAU BENAR: Lanjut ke soal berikutnya
     document.querySelectorAll(".qopt").forEach((b) => (b.disabled = true));
     btn.classList.add("picked");
@@ -322,7 +353,7 @@ function updateLoveMsg() {
   let msg = "Tekan & tahan buktiin sayangmu...";
   if (loveProgress > 15) msg = "Masih kurang nih... 😅";
   if (loveProgress > 30) msg = "Sedikit lagi sayang... 💪";
-  if (loveProgress > 50) msg = "Hampir sampai! 😍";
+  if (loveProgress > 50) msg = "Hampir full!! 😍";
   if (loveProgress > 70) msg = "Sekitar 30% lagii!! 💗";
   if (loveProgress > 85) msg = "FULL! Kamu sayang bangeet! ❤️‍🔥";
   document.getElementById("love-msg").textContent = msg;
@@ -551,10 +582,13 @@ function goToBday() {
   setTimeout(startCake, 350);
 }
 
-const LTR = `"null
-NULL
+const LTR = `"Happy birthday sayangku, cintaku, manisku, semestaku, bidadariku 🥳🥳🎉
 
-NULL❤"`;
+I built this website with all my heart! Well, okay... maybe 30% my brain and 70% my best buddy Gemini's help, hehehe. But I promise, the love behind it is 100% mine. I might not be the most poetic guy, but I wanted a special way to tell you how much you mean to me, and I hope this little project shows you exactly that.
+
+I hope this new year of your life brings you happiness, peace, and all the good things you have been wishing for. May every step you take feel lighter, and may you always be surrounded by love and people who truly care about you. You deserve so much more than you realize.
+
+I'm thankful I get to celebrate you today, and hopefully many days after this. I look forward to creating more memories with you, growing together, and loving you in the simple ways that matter most. Happy birthday semestaku 💕"`;
 let ti = 0,
   tt = null;
 function startTyping() {
@@ -693,3 +727,18 @@ function initScratchCard() {
     canvas.addEventListener("touchend", scratchEnd);
   });
 }
+
+window.addEventListener("load", function () {
+  const loader = document.getElementById("preloader");
+  if (loader) {
+    // Tahan dulu selama 2500 milidetik (2,5 detik) sebelum mulai dibikin transparan
+    setTimeout(() => {
+      loader.style.opacity = "0";
+
+      // Setelah transparan, baru benar-benar dihilangkan dari layar
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 500);
+    }, 2500); // <-- Lu bisa ganti 2500 jadi 3000 (3 detik) atau lebih kalau masih kurang lama
+  }
+});
